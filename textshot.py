@@ -1,6 +1,5 @@
 import io
 import sys
-import os
 
 import pyperclip
 import pytesseract
@@ -123,16 +122,15 @@ def notify(msg):
 if __name__ == "__main__":
 
     try:
-        # pytesseract.pytesseract.tesseract_cmd('C:\Program Files\Tesseract-OCR\tesseract.exe')
         pytesseract.get_tesseract_version()
     except EnvironmentError as error:
         notify(
-            "teseeract is not installed or cannot be reached\n"
+            "Teseeract-OCR is not installed or cannot be reached\n"
             "Install it and then try again!"
         )
 
         print(
-            f"ERROR: Tesseract Not Installed or cannot be reached {error}\n"
+            f"ERROR: Tesseract-OCR Not Installed or cannot be reached {error}\n"
         )
         sys.exit()
 
